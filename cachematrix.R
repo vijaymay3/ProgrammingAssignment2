@@ -1,11 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
-
 ## This function takes matrix object as a parameter and wraps it with list object which does cache management
-
 makeCacheMatrix <- function(x = matrix()) {
 
-	#
 	inv <- NULL
         set <- function(y) {
                 x <<- y
@@ -21,7 +16,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function takes CacheMatrix object as prameter solves the matrix,
+## This function takes CacheMatrix object as prameter solves the matrix, if the matrix is already solved then it is retrived from the cache otherwise inverse of matrix is solved.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
 	inv <- x$getinv()
